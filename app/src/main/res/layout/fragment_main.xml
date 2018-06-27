@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.attaurrahman.timetableapp.fragment.MainFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_monday"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5sp"
+        android:background="@color/gray_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/m"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Monday"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="10sp"
+            android:textSize="30sp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tuesday"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5sp"
+        android:background="@color/gray_color"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tuesday"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="10sp"
+            android:textSize="30sp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_wednesday"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5sp"
+        android:background="@color/gray_color"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Wednesday"
+            android:layout_marginLeft="10sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_thursday"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5sp"
+        android:background="@color/gray_color"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Thursday"
+            android:layout_marginLeft="10sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_friday"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5sp"
+        android:background="@color/gray_color"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Friday"
+            android:layout_marginLeft="10sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+</LinearLayout>
