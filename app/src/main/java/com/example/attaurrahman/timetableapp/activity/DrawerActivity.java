@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.attaurrahman.timetableapp.R;
 import com.example.attaurrahman.timetableapp.fragment.LoginFragment;
@@ -32,7 +33,11 @@ public class DrawerActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Utilities.withOutBackStackConnectFragment(this,new MainFragment());
+
+
+
+
+        Utilities.withOutBackStackConnectFragment(this, new MainFragment());
       /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +55,11 @@ public class DrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        TextView tvHeaderName = headerView.findViewById(R.id.tv_nav_header_drawer_name);
+        TextView tvHeaderEmail = headerView.findViewById(R.id.tv_header_drawer_email);
+        tvHeaderName.setText(Utilities.getSharedPreferences(this).getString("name",""));
+        tvHeaderEmail.setText(Utilities.getSharedPreferences(this).getString("email",""));
     }
 
     @Override
@@ -105,7 +115,7 @@ public class DrawerActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_log_out) {
             Utilities.putValueInEditor(this).putBoolean("isLogin", false).commit();
-            startActivity(new Intent(DrawerActivity.this,MainActivity.class));
+            startActivity(new Intent(DrawerActivity.this, MainActivity.class));
             finish();
 
         }

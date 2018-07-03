@@ -34,6 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 getSupportActionBar().show();
             }
         };
-        handler.postDelayed(r, 1000);
+        handler.postDelayed(r, 500);
     }
 }

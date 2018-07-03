@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.attaurrahman.timetableapp.fragment.AllDayTimeTableFragment">
+
+
+
+
+        <TextView
+            android:id="@+id/tv_no_class"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:text="No Class"
+            android:background="@color/gray_color"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:textSize="30sp"
+            android:visibility="gone"
+            android:gravity="center_vertical"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_time_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

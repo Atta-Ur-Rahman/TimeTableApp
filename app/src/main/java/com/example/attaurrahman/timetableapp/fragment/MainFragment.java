@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.attaurrahman.timetableapp.R;
+import com.example.attaurrahman.timetableapp.uitils.Utilities;
 
 
 public class MainFragment extends Fragment implements View.OnClickListener{
@@ -42,19 +43,24 @@ public class MainFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ll_monday:
-
+                Utilities.connectFragment(getActivity(),new AllDayTimeTableFragment());
+                Utilities.putValueInEditor(getActivity()).putString("day","http://testingcodes.com/projectAPI/TimeTableAPI/mondayTimetable.php").commit();
                 break;
             case R.id.ll_tuesday:
-
+                Utilities.connectFragment(getActivity(),new AllDayTimeTableFragment());
+                Utilities.putValueInEditor(getActivity()).putString("day","http://testingcodes.com/projectAPI/TimeTableAPI/tuesdayTimetable.php").commit();
                 break;
             case R.id.ll_wednesday:
-
+                Utilities.connectFragment(getActivity(),new AllDayTimeTableFragment());
+                Utilities.putValueInEditor(getActivity()).putString("day","http://testingcodes.com/projectAPI/TimeTableAPI/wednesdayTimetable.php").commit();
                 break;
             case R.id.ll_thursday:
-
+                Utilities.connectFragment(getActivity(),new AllDayTimeTableFragment());
+                Utilities.putValueInEditor(getActivity()).putString("day","http://testingcodes.com/projectAPI/TimeTableAPI/thursdayTimetable.php").commit();
                 break;
             case R.id.ll_friday:
-
+                Utilities.connectFragment(getActivity(),new AllDayTimeTableFragment());
+                Utilities.putValueInEditor(getActivity()).putString("day","http://testingcodes.com/projectAPI/TimeTableAPI/fridayTimetable.php").commit();
                 break;
 
 
