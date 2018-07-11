@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.attaurrahman.timetableapp.R;
+import com.example.attaurrahman.timetableapp.activity.DrawerActivity;
 import com.example.attaurrahman.timetableapp.uitils.Utilities;
 
 import java.util.HashMap;
@@ -38,6 +39,8 @@ public class ChangePasswordFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.fragment_change_password, container, false);
+
+        ((DrawerActivity)getActivity()).actionBarShow();
 
         etChangeNewPassword = parentView.findViewById(R.id.et_change_new_password);
         etChangeReEnterNewPassword = parentView.findViewById(R.id.et_change_re_enter_new_password);

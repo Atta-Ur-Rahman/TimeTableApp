@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.attaurrahman.timetableapp.R;
+import com.example.attaurrahman.timetableapp.activity.DrawerActivity;
 import com.example.attaurrahman.timetableapp.uitils.Utilities;
 
 public class ProfileFragment extends Fragment {
@@ -18,6 +19,8 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        ((DrawerActivity)getActivity()).actionBarShow();
 
         tvProfileName = parentView.findViewById(R.id.tv_profile_name);
         tvProfileContactNo = parentView.findViewById(R.id.tv_profile_contact_no);

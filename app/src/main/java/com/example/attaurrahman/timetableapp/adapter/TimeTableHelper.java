@@ -12,7 +12,18 @@ public class TimeTableHelper {
     String class_end_time;
     String room_no;
     String semester;
+    String section;
+    String credithour;
+    String subjectId;
+    String emptyRoom;
 
+    public String getEmptyRoom() {
+        return emptyRoom;
+    }
+
+    public void setEmptyRoom(String emptyRoom) {
+        this.emptyRoom = emptyRoom;
+    }
 
     public String getSubject_name() {
         return subject_name;
@@ -60,5 +71,27 @@ public class TimeTableHelper {
 
     public void setSemester(String semester) {
         this.semester = semester;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+    public String getCredithour() {
+        return credithour;
+    }
+
+    public void setCredithour(String credithour) {
+        this.credithour = credithour;
+    }
+    public String getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(String subjectId) {
+        this.subjectId = subjectId;
     }
 }

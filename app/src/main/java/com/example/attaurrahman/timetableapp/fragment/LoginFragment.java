@@ -26,7 +26,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.attaurrahman.timetableapp.R;
 import com.example.attaurrahman.timetableapp.activity.DrawerActivity;
+import com.example.attaurrahman.timetableapp.uitils.CheckNetwork;
 import com.example.attaurrahman.timetableapp.uitils.Utilities;
+import com.github.rahatarmanahmed.cpv.CircularProgressView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,6 +44,7 @@ public class LoginFragment extends Fragment {
     EditText etEmail, etPassword;
     TextView tvForgetPassword;
     String strEmail, strPassword;
+    CircularProgressView circularProgressView;
 
 
     @Override
@@ -53,6 +56,8 @@ public class LoginFragment extends Fragment {
         etEmail = parentView.findViewById(R.id.et_email);
         etPassword = parentView.findViewById(R.id.et_password);
         tvForgetPassword = parentView.findViewById(R.id.tv_forget_password);
+        circularProgressView = parentView.findViewById(R.id.cp_login);
+
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +72,16 @@ public class LoginFragment extends Fragment {
                     etPassword.setError("Enter password");
                 } else {
 
-                    Login();
+                    if (!CheckNetwork.isInternetAvailable(getActivity())){
+
+                        Toast.makeText(getActivity(), "No internet connection", Toast.LENGTH_SHORT).show();
+
+                    }else {
+                        circularProgressView.startAnimation();
+                        circularProgressView.setVisibility(View.VISIBLE);
+                        Login();
+                    }
+
                 }
 
 
@@ -134,6 +148,8 @@ public class LoginFragment extends Fragment {
                     public void onErrorResponse(VolleyError error) {
                         Log.d("zma login erro", error.toString());
                         Toast.makeText(getActivity(), "ERROR", Toast.LENGTH_SHORT).show();
+                        circularProgressView.stopAnimation();
+                        circularProgressView.setVisibility(View.GONE);
 
                     }
                 }

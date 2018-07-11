@@ -1,13 +1,50 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.attaurrahman.timetableapp.fragment.RescheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="57sp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_reschedule_back"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:padding="5sp"
+            android:layout_marginLeft="10sp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/tv_reschedule_day"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Monday"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="27sp"
+            />
+    </LinearLayout>
+    <com.github.rahatarmanahmed.cpv.CircularProgressView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cp_reshedule"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cpv_animAutostart="false"
+        android:layout_gravity="center_horizontal"
+        app:cpv_color="@color/colorPrimaryDark"
+        app:cpv_indeterminate="true"
+        android:layout_marginTop="60sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_reschedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
 
-</FrameLayout>
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30sp"
+    android:background="@drawable/round_background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/tv_reschedule"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:text="Reschedule"
+            android:gravity="center_vertical"
+            android:paddingLeft="20sp"
+            />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:background="@color/cpv_default_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher_background"/>
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:text="Cancel"
+            android:gravity="center_vertical"
+            android:paddingLeft="20sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

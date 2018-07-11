@@ -26,6 +26,8 @@ import com.example.attaurrahman.timetableapp.uitils.Utilities;
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    android.support.v7.app.ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +35,11 @@ public class DrawerActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
+        actionBar = getSupportActionBar();
 
 
         Utilities.withOutBackStackConnectFragment(this, new MainFragment());
+
       /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +60,16 @@ public class DrawerActivity extends AppCompatActivity
         View headerView = navigationView.getHeaderView(0);
         TextView tvHeaderName = headerView.findViewById(R.id.tv_nav_header_drawer_name);
         TextView tvHeaderEmail = headerView.findViewById(R.id.tv_header_drawer_email);
-        tvHeaderName.setText(Utilities.getSharedPreferences(this).getString("name",""));
-        tvHeaderEmail.setText(Utilities.getSharedPreferences(this).getString("email",""));
+        tvHeaderName.setText(Utilities.getSharedPreferences(this).getString("name", ""));
+        tvHeaderEmail.setText(Utilities.getSharedPreferences(this).getString("email", ""));
+    }
+
+
+    public void actionBarhide() {
+        actionBar.hide();
+    }
+    public void actionBarShow() {
+        actionBar.show();
     }
 
     @Override

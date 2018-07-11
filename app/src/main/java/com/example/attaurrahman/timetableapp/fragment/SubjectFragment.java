@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.attaurrahman.timetableapp.R;
+import com.example.attaurrahman.timetableapp.activity.DrawerActivity;
 
 public class SubjectFragment extends Fragment {
     View parentView;
@@ -16,6 +17,9 @@ public class SubjectFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         parentView =inflater.inflate(R.layout.fragment_subject, container, false);
+
+        ((DrawerActivity)getActivity()).actionBarShow();
+
         return parentView;
     }
 

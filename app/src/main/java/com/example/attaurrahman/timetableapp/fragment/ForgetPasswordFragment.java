@@ -23,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.attaurrahman.timetableapp.R;
+import com.example.attaurrahman.timetableapp.activity.DrawerActivity;
 import com.example.attaurrahman.timetableapp.uitils.Utilities;
 
 import org.json.JSONException;
@@ -43,6 +44,8 @@ public class ForgetPasswordFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.fragment_forget_password, container, false);
+
+        ((DrawerActivity)getActivity()).actionBarShow();
 
         btnForgetUpdatePassword = parentView.findViewById(R.id.btn_forget_update_password);
         etForgetPasswordEmail = parentView.findViewById(R.id.et_forget_password_email);
